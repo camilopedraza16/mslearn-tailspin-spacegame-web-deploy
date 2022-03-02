@@ -87,6 +87,7 @@ stages:
               appType: 'webAppLinux'
               appName: '$(WebAppNameStaging)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+              deploymentMethod: 'auto'
   - job: RunLoadTests
     dependsOn: Deploy
     displayName: 'Run load tests'
